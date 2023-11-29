@@ -26,6 +26,11 @@ header {
     flex: 1;
 }
 
+.shopify-logo-mobile {
+    display: none;
+}
+
+
 .shopify-search {
     display: flex;
     justify-content: center;
@@ -77,7 +82,7 @@ header {
     flex: 1;
 }
 
-.shopify-profile-notification-bell, .shopify-profile-dropdown {
+.shopify-profile-notification-bell, .shopify-profile-dropdown, .shopify-profile-dropdown-mobile {
     background: none;
     border: 0;
     outline: 0;
@@ -109,7 +114,8 @@ header {
 
 .shopify-profile-notification-bell:focus,
 .shopify-profile-dropdown:focus,
-.shopify-subscription-action button:focus {
+.shopify-subscription-action button:focus,
+.shopify-profile-dropdown-mobile:focus {
     outline: 2px solid #005BD3;
     outline-offset: 1px;
 }
@@ -125,6 +131,10 @@ header {
     cursor: pointer;
 
     transition: all 200ms ease-in;
+}
+
+.shopify-profile-dropdown-mobile {
+    display: none;
 }
 
 .shopify-profile-dropdown p{
@@ -190,14 +200,104 @@ header {
     background: #F7F7F7;
     box-shadow: 0px -1px 0px 0px #B5B5B5;
 }
+
 .shopify-subscription-action button:active {
     border-radius: 6px;
     background: #F7F7F7;
     box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
 }
 
-@media screen and (max-width: 640px) {
+.shopify-setup {
+    width: 100%;
+    background: #fff;
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 15px;
+}
+
+.shopify-setup-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopify-setup h2 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.shopify-setup-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.shopify-setup-progress {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.shopify-setup-progress p {
+    font-size: 12px;
+}
+
+.shopify-setup-progress-bar {
+    width: 72px;
+    height: 4px;
+    background: #E3E3E3;
+    margin-left: 8px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shopify-setup-progress-bar:after {
+    content: "";
+    position: absolute;
+    background: #1A1A1A;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: 20px;
+}
+
+@media screen and (max-width: 767px) {
     .shopify-logo {
         display: none;
+    }
+
+    .shopify-logo-mobile {
+        display: block;
+    }
+
+    .shopify-profile-dropdown {
+        display: none;
+    }
+
+    .shopify-search {
+        margin: 0 8px;
+    }
+
+    .shopify-profile {
+        flex: 0;
+    }
+
+    .shopify-profile-notification-bell {
+        background-color: transparent;
+    }
+
+    .shopify-profile-dropdown-mobile {
+    color: #00000066;
+    font-size: 12px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #36FBA1;
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+    margin-left: 8px;
     }
 }
