@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.shopify-dashboard {
+    background: #F1F1F1;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1A1A1A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+}
+
+.shopify-logo {
+    flex: 1;
+}
+
+.shopify-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #616161;
+    background:  #303030;
+    padding: 8px;
+}
+
+.shopify-search:hover {
+    border: 1px solid #E1E1E1;
+}
+.shopify-search:active {
+    border: 2px solid #FFF;
+}
+
+.shopify-search:focus {
+    border: 2px solid #FFF;
+}
+
+.shopify-search svg {
+    width: 20px;
+}
+
+.shopify-search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 6px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.shopify-search input::placeholder {
+    font-size: 13px;
+    color: #B5B5B5;
+    font-weight: 500;
+}
+
+.shopify-profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+
+.shopify-profile-notification-bell, .shopify-profile-dropdown {
+    background: none;
+    border: 0;
+    outline: 0;
+}
+
+.shopify-profile-notification-bell {
+    width: 32px;
+    height: 32px;
+    background: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.shopify-profile-notification-bell:hover,
+.shopify-profile-dropdown:hover {
+    background-color: #616161;
+}
+
+.shopify-profile-notification-bell:active,
+.shopify-profile-notification-bell:focus,
+.shopify-profile-dropdown:active,
+.shopify-profile-dropdown:focus {
+    background-color: #656266;
+}
+
+.shopify-profile-notification-bell:focus,
+.shopify-profile-dropdown:focus,
+.shopify-subscription-action button:focus {
+    outline: 2px solid #005BD3;
+    outline-offset: 1px;
+}
+
+.shopify-profile-dropdown{
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 0 0 8px;
+    margin-left: 8px;
+    background: #303030;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 200ms ease-in;
+}
+
+.shopify-profile-dropdown p{
+    color: #E3E3E3;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.shopify-profile-dropdown span{
+    color: #00000066;
+    font-size: 14px;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #36FBA1;
+    padding: 0 4px;
+    height: 26px;
+    border-radius: 8px;
+    margin: 0 4px 0 8px;
+}
+
+.shopify-dashboard-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.shopify-subscription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1A1A1A;
+    padding: 12px 16px;
+    border-radius: 6px;
+}
+
+.shopify-subscription p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #E3E3E3;
+}
+
+.shopify-subscription-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopify-subscription-action button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    margin-right: 8px;
+
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #FFF;
+}
+
+.shopify-subscription-action button:hover {
+    background: #F7F7F7;
+    box-shadow: 0px -1px 0px 0px #B5B5B5;
+}
+.shopify-subscription-action button:active {
+    border-radius: 6px;
+    background: #F7F7F7;
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+}
+
+@media screen and (max-width: 640px) {
+    .shopify-logo {
+        display: none;
+    }
+}
