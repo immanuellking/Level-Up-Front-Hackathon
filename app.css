@@ -8,6 +8,10 @@ body {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .shopify-dashboard {
     background: #F1F1F1;
     min-height: 100vh;
@@ -115,7 +119,8 @@ header {
 .shopify-profile-notification-bell:focus,
 .shopify-profile-dropdown:focus,
 .shopify-subscription-action button:focus,
-.shopify-profile-dropdown-mobile:focus {
+.shopify-profile-dropdown-mobile:focus,
+.shopify-setup-step-action-button:focus {
     outline: 2px solid #005BD3;
     outline-offset: 1px;
 }
@@ -195,6 +200,8 @@ header {
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.10);
     background: #FFF;
+
+    transition: all 200ms ease-in;
 }
 
 .shopify-subscription-action button:hover {
@@ -212,8 +219,12 @@ header {
     width: 100%;
     background: #fff;
     margin-top: 16px;
-    padding: 16px;
+    padding: 8px;
     border-radius: 15px;
+}
+
+.shopify-setup-section {
+    margin: 8px 8px 16px 8px;
 }
 
 .shopify-setup-title {
@@ -259,6 +270,76 @@ header {
     top:0;
     bottom: 0;
     width: 20px;
+}
+
+.shopify-setup-step {
+    padding: 8px;
+    display: none;
+    align-items: start;
+    border-radius: 10px;
+    background: #F3F3F3;
+}
+
+.shopify-setup-step.active {
+    display: flex;
+}
+
+.shopify-setup-step-action {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 8px;
+    gap: 16px;
+}
+
+.shopify-setup-step-header-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.shopify-setup-step-info-text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.shopify-setup-step-info-text p {
+    color: #616161;
+}
+
+.shopify-setup-step-info-text a {
+    text-decoration: none;
+    color: #005BD3;
+    font-size: 14px;
+}
+
+.shopify-setup-step-action-button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.20);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.20);
+    background: #404040;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 1px 0px 1.5px #333, 0px 2px 0px 0px #000;
+    color: #F6F3F6;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 200ms ease-in;
+}
+
+.shopify-setup-step-action-button:hover {
+    background: #2A2A2A;
+}
+
+.shopify-setup-step-action-button:active {
+    background: #2B2B2B;
+    box-shadow: 0px 0px 0px 1.5px #333, 0px 3px 0px 0px #000 inset;
+}
+
+.shopify-setup-step-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 @media screen and (max-width: 767px) {
@@ -317,5 +398,9 @@ header {
         justify-content: start;
         align-items: start;
         gap: 16px;
+    }
+
+    .shopify-setup {
+        border-radius: 0;
     }
 }
