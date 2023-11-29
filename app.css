@@ -283,6 +283,9 @@ header {
 .shopify-setup-step.active {
     display: flex;
 }
+.shopify-setup-icon {
+    transition: all 200ms ease-in;
+}
 
 .shopify-setup-step-action {
     display: flex;
@@ -402,5 +405,13 @@ header {
 
     .shopify-setup {
         border-radius: 0;
+    }
+
+    .shopify-setup-step {
+        padding: 12px 8px;
+    }
+
+    .shopify-setup-step-image {
+        display: none;
     }
 }
