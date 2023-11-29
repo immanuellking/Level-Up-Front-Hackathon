@@ -180,6 +180,7 @@ header {
 
 .shopify-subscription-action {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -304,5 +305,17 @@ header {
     .shopify-dashboard-content {
         width: 100%;
         margin-top: 25px;
+    }
+
+    .shopify-subscription {
+        align-items: start;
+        border-radius: 0;
+    }
+
+    .shopify-subscription-action {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 16px;
     }
 }
