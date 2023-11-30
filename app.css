@@ -275,9 +275,11 @@ header {
 .shopify-setup-step {
     padding: 8px;
     display: none;
-    align-items: start;
+    align-items: center;
+    /* align-items: start; */
     border-radius: 10px;
-    background: #F3F3F3;
+    /* background: #F3F3F3; */
+    
 }
 
 .shopify-setup-step.active {
@@ -285,6 +287,7 @@ header {
 }
 .shopify-setup-icon {
     transition: all 200ms ease-in;
+    cursor: pointer;
 }
 
 .shopify-setup-step-action {
@@ -293,6 +296,10 @@ header {
     align-items: start;
     margin-left: 8px;
     gap: 16px;
+}
+
+.shopify-setup-step-icon {
+    cursor: pointer;
 }
 
 .shopify-setup-step-icon .default {
@@ -318,6 +325,12 @@ header {
 .shopify-setup-step-info-text {
     font-size: 13px;
     font-weight: 500;
+}
+
+.shopify-setup-step-action-button,
+.shopify-setup-step-info-text,
+.shopify-setup-step-image {
+    display: none;
 }
 
 .shopify-setup-step-info-text p {
@@ -355,7 +368,6 @@ header {
 
 .shopify-setup-step-image {
     flex: 1;
-    display: flex;
     align-items: center;
     justify-content: end;
 }

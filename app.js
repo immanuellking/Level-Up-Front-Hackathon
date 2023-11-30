@@ -1,6 +1,10 @@
 const guideToggle = document.querySelector(".shopify-setup-icon");
 const setupStep = document.querySelector(".shopify-setup-step");
 const stepButton = document.querySelector(".shopify-setup-step-icon");
+const stepActionButton = document.querySelector(".shopify-setup-step-action-button");
+const stepText = document.querySelector(".shopify-setup-step-info-text");
+const stepImage = document.querySelector(".shopify-setup-step-image");
+
 
 guideToggle.addEventListener("click", () => {
   if (setupStep.classList.contains("active")) {
@@ -52,3 +56,12 @@ stepButton.addEventListener("click", () => {
     stepButton.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="default"><circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" /></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover-state"><circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/></svg>`
   }
 });
+
+
+setupStep.addEventListener("click", () => {
+    setupStep.style.alignItems = "start";
+    setupStep.style.background = "#F3F3F3";
+    stepActionButton.style.display = "block";
+    stepText.style.display = "block";
+    stepImage.style.display = "flex;"
+})
