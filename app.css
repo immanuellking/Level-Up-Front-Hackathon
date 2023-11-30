@@ -295,6 +295,21 @@ header {
     gap: 16px;
 }
 
+.shopify-setup-step-icon .default {
+    display: block;
+}
+
+.shopify-setup-step-icon .hover-state {
+    display: none;
+}
+
+.shopify-setup-step-icon:hover .default {
+    display: none;
+}
+.shopify-setup-step-icon:hover .hover-state {
+    display: block;
+}
+
 .shopify-setup-step-header-title {
     font-size: 13px;
     font-weight: 600;
