@@ -272,9 +272,17 @@ header {
     width: 20px;
 }
 
+.shopify-setup-all-steps {
+    display: none;
+}
+
+.shopify-setup-all-steps.active {
+    display: block;
+}
+
 .shopify-setup-step {
     padding: 8px;
-    display: none;
+    display: flex;
     align-items: center;
     /* align-items: start; */
     border-radius: 10px;
@@ -282,12 +290,10 @@ header {
     
 }
 
-.shopify-setup-step.active {
-    display: flex;
-}
 .shopify-setup-icon {
     transition: all 200ms ease-in;
     cursor: pointer;
+    transform: rotate(180deg);
 }
 
 .shopify-setup-step-action {
