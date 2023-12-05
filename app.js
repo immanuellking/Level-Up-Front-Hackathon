@@ -12,6 +12,16 @@ const stepActionButtonAll = document.querySelectorAll(
 const stepTextAll = document.querySelectorAll(".shopify-setup-step-info-text");
 const stepImageAll = document.querySelectorAll(".shopify-setup-step-image");
 
+const subscriptionSection = document.querySelector(".shopify-subscription");
+const subscriptionClose = document.querySelector(".shopify-subscription-close");
+
+
+
+subscriptionClose.addEventListener("click", () => {
+  subscriptionSection.classList.add("close")
+})
+
+
 guideToggle.addEventListener("click", () => {
   if (setupAllSteps.classList.contains("active")) {
     setupAllSteps.classList.remove("active");
