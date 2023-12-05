@@ -262,14 +262,14 @@ header {
     overflow: hidden;
 }
 
-.shopify-setup-progress-bar:after {
-    content: "";
+.shopify-setup-progress-bar-after {
     position: absolute;
     background: #1A1A1A;
     left: 0;
     top:0;
     bottom: 0;
-    width: 20px;
+    width: 0%;
+    transition: all 200ms ease-in;
 }
 
 .shopify-setup-all-steps {

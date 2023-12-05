@@ -3,6 +3,9 @@ const setupAllSteps = document.querySelector(".shopify-setup-all-steps");
 const setupSteps = document.querySelectorAll(".shopify-setup-step");
 const stepButtons = document.querySelectorAll(".shopify-setup-step-icon");
 
+const progressBar = document.querySelector(".shopify-setup-progress-bar-after");
+const progressNo = document.querySelector(".shopify-setup-progress-no");
+
 const stepActionButtonAll = document.querySelectorAll(
   ".shopify-setup-step-action-button"
 );
@@ -55,20 +58,21 @@ stepButtons.forEach((stepButton) => {
 
       // Start the loading animation
       loadingAnimation();
+      progress();
     } else {
       stepButton.classList.remove("active");
       stepButton.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="default"><circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5" /></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover-state"><circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      progress();
     }
   });
 });
 
 setupSteps.forEach((setupStep) => {
-
   setupStep.addEventListener("click", () => {
     setupSteps.forEach((step) => {
-        step.style.background = "transparent";
-        step.style.alignItems = "center";
-      });
+      step.style.background = "transparent";
+      step.style.alignItems = "center";
+    });
 
     stepActionButtonAll.forEach((button) => {
       button.style.display = "none";
@@ -93,3 +97,19 @@ setupSteps.forEach((setupStep) => {
     stepImage.style.display = "flex";
   });
 });
+
+function progress() {
+  let progressWidth = 0;
+  stepButtons.forEach((buttons) => {
+    if (buttons.classList.contains("active")) {
+      progressWidth++;
+    }
+  });
+  console.log(progressWidth);
+
+  const calc = (progressWidth / stepButtons.length) * 100;
+  progressBar.style.width = `${calc}%`
+  progressNo.innerText = `${progressWidth} / 5 completed`
+
+}
+
