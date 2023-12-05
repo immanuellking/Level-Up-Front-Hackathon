@@ -81,7 +81,7 @@ setupSteps.forEach((setupStep) => {
       text.style.display = "none";
     });
     stepImageAll.forEach((image) => {
-      image.style.display = "none";
+      image.classList.remove("display");
     });
 
     setupStep.style.alignItems = "start";
@@ -94,7 +94,7 @@ setupSteps.forEach((setupStep) => {
     const stepImage = setupStep.querySelector(".shopify-setup-step-image");
     stepActionButton.style.display = "block";
     stepText.style.display = "block";
-    stepImage.style.display = "flex";
+    stepImage.classList.add("display");
   });
 });
 
